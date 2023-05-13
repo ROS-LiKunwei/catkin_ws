@@ -68,10 +68,4 @@
 [  0%] Built target sensor_msgs_generate_messages_py
 [  0%] Built target trajectory_msgs_generate_messages_cpp
 [  0%] Built target trajectory_msgs_generate_messages_eus
-[ 16%] [32mBuilding CXX object CMakeFiles/pilz_industrial_motion_planner_testutils.dir/src/cartesianconfiguration.cpp.o[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/pilz_industrial_motion_planner_testutils.dir/src/jointconfiguration.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/pilz_industrial_motion_planner_testutils.dir/src/robotconfiguration.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/pilz_industrial_motion_planner_testutils.dir/src/sequence.cpp.o[0m
-[ 83%] [32mBuilding CXX object CMakeFiles/pilz_industrial_motion_planner_testutils.dir/src/xml_testdata_loader.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/lkw/catkin_ws/devel/.private/pilz_industrial_motion_planner_testutils/lib/libpilz_industrial_motion_planner_testutils.so[0m
 [100%] Built target pilz_industrial_motion_planner_testutils

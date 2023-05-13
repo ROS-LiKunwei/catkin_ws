@@ -1,3 +1,1 @@
-[ 50%] [32mBuilding CXX object CMakeFiles/grasp.dir/src/grasp.cpp.o[0m
-[100%] [32m[1mLinking CXX executable /home/lkw/catkin_ws/devel/.private/grasp_gazebo/lib/grasp_gazebo/grasp[0m
 [100%] Built target grasp

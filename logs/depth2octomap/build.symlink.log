@@ -1,4 +1,4 @@
-Symlinking /home/lkw/catkin_ws/devel/share/depth2octomap/cmake/depth2octomapConfig.cmake
-Symlinking /home/lkw/catkin_ws/devel/share/depth2octomap/cmake/depth2octomapConfig-version.cmake
-Symlinking /home/lkw/catkin_ws/devel/lib/pkgconfig/depth2octomap.pc
-Symlinking /home/lkw/catkin_ws/devel/lib/depth2octomap/depth2octomap
+Linked: (/home/lkw/catkin_ws/devel/.private/depth2octomap/share/depth2octomap/cmake/depth2octomapConfig.cmake, /home/lkw/catkin_ws/devel/share/depth2octomap/cmake/depth2octomapConfig.cmake)
+Linked: (/home/lkw/catkin_ws/devel/.private/depth2octomap/share/depth2octomap/cmake/depth2octomapConfig-version.cmake, /home/lkw/catkin_ws/devel/share/depth2octomap/cmake/depth2octomapConfig-version.cmake)
+Linked: (/home/lkw/catkin_ws/devel/.private/depth2octomap/lib/pkgconfig/depth2octomap.pc, /home/lkw/catkin_ws/devel/lib/pkgconfig/depth2octomap.pc)
+Linked: (/home/lkw/catkin_ws/devel/.private/depth2octomap/lib/depth2octomap/depth2octomap, /home/lkw/catkin_ws/devel/lib/depth2octomap/depth2octomap)
