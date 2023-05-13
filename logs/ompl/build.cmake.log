@@ -1,0 +1,85 @@
+Not searching for unused variables given on the command line.
+[36m--[0m The CXX compiler identification is GNU 7.5.0
+[36m--[0m Detecting CXX compiler ABI info
+[36m--[0m Detecting CXX compiler ABI info - done
+[36m--[0m Check for working CXX compiler: /usr/bin/c++ - skipped
+[36m--[0m Detecting CXX compile features
+[36m--[0m Detecting CXX compile features - done
+[36m--[0m Build type: Release
+[36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
+[36m--[0m Checking for module 'ode'
+[36m--[0m   Found ode, version 0.14
+[36m--[0m Checking for module 'flann'
+[36m--[0m   Found flann, version 1.9.1
+[36m--[0m Checking for module 'libspot'
+[36m--[0m   No package 'libspot' found
+[36m--[0m Could NOT find spot (missing: SPOT_LIBRARIES SPOT_INCLUDE_DIRS)
+[36m--[0m Found Doxygen: /usr/bin/doxygen (found version "1.8.13") found components: doxygen dot
+[36m--[0m Found PY_numpy: /usr/lib/python2.7/dist-packages/numpy
+[36m--[0m Could NOT find PY_pyplusplus (missing: PY_PYPLUSPLUS)
+[36m--[0m Could NOT find PY_pygccxml (missing: PY_PYGCCXML)
+[36m--[0m Could NOT find castxml (missing: CASTXML)
+[36m--[0m Checking for module 'yaml-cpp'
+[36m--[0m   Found yaml-cpp, version 0.5.2
+[36m--[0m Found yaml-cpp: yaml-cpp
+[36m--[0m The following features have been enabled:
+
+ * OMPL_VERSIONED_INSTALL, Whether to install header files in
+   <prefix>/include/ompl-X.Y/ompl, where X and Y are the major and minor
+   version numbers
+ * OMPL_BUILD_TESTS, Whether to build the unit tests.
+ * OMPL_BUILD_DEMOS, Whether to build the OMPL demo programs.
+
+[36m--[0m The following OPTIONAL packages have been found:
+
+ * Threads, <https://en.wikipedia.org/wiki/POSIX_Threads>
+   Pthreads is sometimes needed, depending on OS / compiler.
+ * ODE, <http://ode.org>
+   The Open Dynamics Engine can be used as a "black box" for kinodynamic planning.
+ * flann (required version >= 1.8.3), <https://github.com/mariusmuja/flann>
+   If detetected, FLANN can be used for nearest neighbor queries by OMPL.
+ * Doxygen, <http://doxygen.org>
+   Used to create the OMPL documentation (i.e., https://ompl.kavrakilab.org).
+ * Python, <https://www.python.org>
+   Used for python bindings.
+ * PkgConfig, <https://www.freedesktop.org/wiki/Software/pkg-config/>
+   Used to find (compilation flags for) dependencies.
+ * yaml-cpp, <https://github.com/jbeder/yaml-cpp>
+   Used for parsing input data for the PlanarManipulator demo.
+
+[36m--[0m The following REQUIRED packages have been found:
+
+ * Eigen3, <http://eigen.tuxfamily.org>
+   A linear algebra library used throughout OMPL.
+ * Boost (required version >= 1.58), <https://www.boost.org>
+   Used throughout OMPL for data serialization, graphs, etc.
+
+[36m--[0m The following features have been disabled:
+
+ * OMPL_BUILD_PYBINDINGS, Whether to build the Python bindings.
+ * OMPL_BUILD_PYTESTS, Whether to build/run the python binding unit tests.
+
+[36m--[0m The following OPTIONAL packages have not been found:
+
+ * pypy, <https://pypy.org>
+   Used to speed up the generation of python bindings.
+ * MORSE, <https://www.openrobots.org/wiki/morse>
+   OMPL includes a plugin for the MORSE Robot Simulation engine.
+ * Triangle, <http://www.cs.cmu.edu/~quake/triangle.html>
+   Used to create triangular decompositions of polygonal 2D environments.
+ * spot, <http://spot.lrde.epita.fr>
+   Used for constructing finite automata from LTL formulae.
+ * castxml, <https://github.com/CastXML/CastXML>
+   Used to generate Python bindings.
+
+[36m--[0m The following Python modules were found:
+
+ * numpy
+
+[36m--[0m The following Python modules were NOT found:
+
+ * pyplusplus pygccxml
+
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/lkw/catkin_ws/build/ompl

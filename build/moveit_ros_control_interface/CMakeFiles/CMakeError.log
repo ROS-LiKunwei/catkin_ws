@@ -1,0 +1,66 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-l8o3C2
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f1301/fast && /usr/bin/make  -f CMakeFiles/cmTC_f1301.dir/build.make CMakeFiles/cmTC_f1301.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-l8o3C2”
+Building C object CMakeFiles/cmTC_f1301.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f1301.dir/src.c.o -c /home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-l8o3C2/src.c
+Linking C executable cmTC_f1301
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1301.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_f1301.dir/src.c.o -o cmTC_f1301 
+CMakeFiles/cmTC_f1301.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3e)：对‘pthread_create’未定义的引用
+src.c:(.text+0x4a)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x56)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x67)：对‘pthread_join’未定义的引用
+src.c:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f1301.dir/build.make:98: recipe for target 'cmTC_f1301' failed
+make[1]: *** [cmTC_f1301] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-l8o3C2”
+Makefile:127: recipe for target 'cmTC_f1301/fast' failed
+make: *** [cmTC_f1301/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-G5ZApk
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6f91e/fast && /usr/bin/make  -f CMakeFiles/cmTC_6f91e.dir/build.make CMakeFiles/cmTC_6f91e.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-G5ZApk”
+Building C object CMakeFiles/cmTC_6f91e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_6f91e.dir/CheckFunctionExists.c.o -c /home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-G5ZApk/CheckFunctionExists.c
+Linking C executable cmTC_6f91e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f91e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_6f91e.dir/CheckFunctionExists.c.o -o cmTC_6f91e  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6f91e.dir/build.make:98: recipe for target 'cmTC_6f91e' failed
+make[1]: *** [cmTC_6f91e] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/moveit_ros_control_interface/CMakeFiles/CMakeScratch/TryCompile-G5ZApk”
+Makefile:127: recipe for target 'cmTC_6f91e/fast' failed
+make: *** [cmTC_6f91e/fast] Error 2
+
+
+

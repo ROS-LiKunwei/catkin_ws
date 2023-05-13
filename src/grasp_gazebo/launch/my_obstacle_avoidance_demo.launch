@@ -1,0 +1,16 @@
+<launch>
+  <include file="$(find robot_model_config)/launch/demo.launch" />
+
+  <!-- Play the rosbag that contains the pointcloud data -->
+  <!--node pkg="moveit_tutorials" type="bag_publisher_maintain_time" name="point_clouds" /-->
+
+  <include file="$(find realsense2_camera)/launch/demo_pointcloud.launch" >
+    <arg name="use_rviz"  value="false"/>
+  </include>
+
+
+  <!-- If needed, broadcast static tf for robot root -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="to_panda" args="0 0 0 0 0 0  world base_link" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="to_camera" args="0.2 0.2 0.570 0 -1.57 0 camera_color_optical_frame world" />
+
+</launch>

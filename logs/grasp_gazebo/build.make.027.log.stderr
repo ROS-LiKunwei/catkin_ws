@@ -1,0 +1,25 @@
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:[m[K In member function ‘[01m[Kvoid Gazebo_Process::create_scene()[m[K’:
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:116:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kcolor[m[K’
+         collision_object2.[01;31m[Kcolor[m[K =color2;
+                           [01;31m[K^~~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:[m[K In member function ‘[01m[Kvoid Gazebo_Process::move_p_constraints(const std::vector<std::vector<double> >&)[m[K’:
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:175:61:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kmoveit::core::MoveItErrorCode moveit::planning_interface::MoveGroupInterface::plan(moveit::planning_interface::MoveGroupInterface::Plan&)[m[K’
+             moveit::planning_interface::MoveGroupInterface::[01;31m[Kplan[m[K plan;
+                                                             [01;31m[K^~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:176:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kplan[m[K’ was not declared in this scope
+             moveit::planning_interface::MoveItErrorCode success = arm_->plan([01;31m[Kplan[m[K);
+                                                                              [01;31m[K^~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:176:78:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ktan[m[K’
+             moveit::planning_interface::MoveItErrorCode success = arm_->plan([01;36m[Kplan[m[K);
+                                                                              [01;36m[K^~~~[m[K
+                                                                              [32m[Ktan[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:185:17:[m[K [01;31m[Kerror: [m[K‘[01m[KROS[m[K’ was not declared in this scope
+                 [01;31m[KROS[m[K("Success to move to No.%d position",i);
+                 [01;31m[K^~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:[m[K In function ‘[01m[Kvoid simulation_move_only()[m[K’:
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:211:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knh[m[K’ was not declared in this scope
+     Gazebo_Process GP([01;31m[Knh[m[K,arm,PLANNING_GROUP);
+                       [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/grasp.dir/all] Error 2
+make: *** [all] Error 2

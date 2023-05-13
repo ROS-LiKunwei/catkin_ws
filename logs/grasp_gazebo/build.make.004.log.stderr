@@ -1,0 +1,36 @@
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:104:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+ }
+  [01;31m[K^[m[K
+  [32m[K;[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:[m[K In constructor ‘[01m[KGazebo_Process::Gazebo_Process(const ros::NodeHandle&, moveit::planning_interface::MoveGroupInterface&, const string&)[m[K’:
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:33:111:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kconst moveit::core::JointModelGroup*[m[K’ to non-scalar type ‘[01m[Kconst JointModelGroupPtr {aka const std::shared_ptr<moveit::core::JointModelGroup>}[m[K’ requested
+         const moveit::core::JointModelGroupPtr joint_model_group = [01;31m[Karm_->getCurrentState()->getJointModelGroup(PLANNING_GROUP)[m[K;
+                                                                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:108:20:[m[K [01;31m[Kerror: [m[K‘[01m[Katgv[m[K’ was not declared in this scope
+     ros::init(argc,[01;31m[Katgv[m[K,"gazebo_grasp_simulation");
+                    [01;31m[K^~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:108:20:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kargv[m[K’
+     ros::init(argc,[01;36m[Katgv[m[K,"gazebo_grasp_simulation");
+                    [01;36m[K^~~~[m[K
+                    [32m[Kargv[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:115:27:[m[K [01;31m[Kerror: [m[K‘[01m[KPLAN[m[K’ was not declared in this scope
+     Gazebo_Process(nh,arm,[01;31m[KPLAN[m[K;NING_GROUP);
+                           [01;31m[K^~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:115:27:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KNAN[m[K’
+     Gazebo_Process(nh,arm,[01;36m[KPLAN[m[K;NING_GROUP);
+                           [01;36m[K^~~~[m[K
+                           [32m[KNAN[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:115:32:[m[K [01;31m[Kerror: [m[K‘[01m[KNING_GROUP[m[K’ was not declared in this scope
+     Gazebo_Process(nh,arm,PLAN;[01;31m[KNING_GROUP[m[K);
+                                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:115:32:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KPLANNING_GROUP[m[K’
+     Gazebo_Process(nh,arm,PLAN;[01;36m[KNING_GROUP[m[K);
+                                [01;36m[K^~~~~~~~~~[m[K
+                                [32m[KPLANNING_GROUP[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:116:11:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Kint system(const char*)[m[K’, declared with attribute warn_unused_result [[01;35m[K-Wunused-result[m[K]
+     [01;35m[Ksystem("pause")[m[K;
+     [01;35m[K~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/grasp.dir/all] Error 2
+make: *** [all] Error 2

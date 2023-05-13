@@ -1,0 +1,8 @@
+prefix=/home/lkw/catkin_ws/devel/.private/grasp_gazebo
+
+Name: grasp_gazebo
+Description: Description of grasp_gazebo
+Version: 0.0.0
+Cflags: -I/home/lkw/catkin_ws/src/grasp_gazebo/include
+Libs: -L${prefix}/lib 
+Requires: moveit_core moveit_ros_planning moveit_ros_planning_interface

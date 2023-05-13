@@ -1,0 +1,12 @@
+<launch>
+  <!--将关节控制器的配置参数加载到参数服务器 -->
+  <rosparam file="$(find robot_gazebo)/config/myrobot_gazebo_joint_states.yaml" command="load"/>
+  
+  <node name="joint_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/myrobot" args="joint_state_controller"/>  
+
+  <!-- Given the published joint states, publish tf for the robot links -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" >
+    <remap from="/joint_states" to="/myrobot/joint_states"/>
+  </node>
+
+</launch>

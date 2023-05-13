@@ -1,0 +1,66 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-EqZ5Da
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_88032/fast && /usr/bin/make  -f CMakeFiles/cmTC_88032.dir/build.make CMakeFiles/cmTC_88032.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-EqZ5Da”
+Building C object CMakeFiles/cmTC_88032.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_88032.dir/src.c.o -c /home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-EqZ5Da/src.c
+Linking C executable cmTC_88032
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88032.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_88032.dir/src.c.o -o cmTC_88032 
+CMakeFiles/cmTC_88032.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3e)：对‘pthread_create’未定义的引用
+src.c:(.text+0x4a)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x56)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x67)：对‘pthread_join’未定义的引用
+src.c:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_88032.dir/build.make:98: recipe for target 'cmTC_88032' failed
+make[1]: *** [cmTC_88032] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-EqZ5Da”
+Makefile:127: recipe for target 'cmTC_88032/fast' failed
+make: *** [cmTC_88032/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-Q8REGB
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_57e9b/fast && /usr/bin/make  -f CMakeFiles/cmTC_57e9b.dir/build.make CMakeFiles/cmTC_57e9b.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-Q8REGB”
+Building C object CMakeFiles/cmTC_57e9b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_57e9b.dir/CheckFunctionExists.c.o -c /home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-Q8REGB/CheckFunctionExists.c
+Linking C executable cmTC_57e9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57e9b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_57e9b.dir/CheckFunctionExists.c.o -o cmTC_57e9b  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_57e9b.dir/build.make:98: recipe for target 'cmTC_57e9b' failed
+make[1]: *** [cmTC_57e9b] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/panda_moveit_config/CMakeFiles/CMakeScratch/TryCompile-Q8REGB”
+Makefile:127: recipe for target 'cmTC_57e9b/fast' failed
+make: *** [cmTC_57e9b/fast] Error 2
+
+
+

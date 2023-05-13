@@ -1,0 +1,3 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/depth2octomap.dir/src/depth2octomap.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/lkw/catkin_ws/devel/.private/depth2octomap/lib/depth2octomap/depth2octomap[0m
+[100%] Built target depth2octomap

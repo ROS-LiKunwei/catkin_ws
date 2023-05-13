@@ -1,0 +1,7 @@
+/usr/bin/ld: 找不到 -lmoveit_core
+/usr/bin/ld: 找不到 -lmoveit_ros_planning
+/usr/bin/ld: 找不到 -lmoveit_ros_planning_interface
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/lkw/catkin_ws/devel/.private/grasp_gazebo/lib/grasp_gazebo/grasp] Error 1
+make[1]: *** [CMakeFiles/grasp.dir/all] Error 2
+make: *** [all] Error 2

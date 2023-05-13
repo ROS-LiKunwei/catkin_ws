@@ -1,0 +1,66 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-M2b3no
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ee32e/fast && /usr/bin/make  -f CMakeFiles/cmTC_ee32e.dir/build.make CMakeFiles/cmTC_ee32e.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-M2b3no”
+Building C object CMakeFiles/cmTC_ee32e.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ee32e.dir/src.c.o -c /home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-M2b3no/src.c
+Linking C executable cmTC_ee32e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee32e.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_ee32e.dir/src.c.o -o cmTC_ee32e 
+CMakeFiles/cmTC_ee32e.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x3e)：对‘pthread_create’未定义的引用
+src.c:(.text+0x4a)：对‘pthread_detach’未定义的引用
+src.c:(.text+0x56)：对‘pthread_cancel’未定义的引用
+src.c:(.text+0x67)：对‘pthread_join’未定义的引用
+src.c:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ee32e.dir/build.make:98: recipe for target 'cmTC_ee32e' failed
+make[1]: *** [cmTC_ee32e] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-M2b3no”
+Makefile:127: recipe for target 'cmTC_ee32e/fast' failed
+make: *** [cmTC_ee32e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-91IgX7
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_64fef/fast && /usr/bin/make  -f CMakeFiles/cmTC_64fef.dir/build.make CMakeFiles/cmTC_64fef.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-91IgX7”
+Building C object CMakeFiles/cmTC_64fef.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_64fef.dir/CheckFunctionExists.c.o -c /home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-91IgX7/CheckFunctionExists.c
+Linking C executable cmTC_64fef
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64fef.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_64fef.dir/CheckFunctionExists.c.o -o cmTC_64fef  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_64fef.dir/build.make:98: recipe for target 'cmTC_64fef' failed
+make[1]: *** [cmTC_64fef] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/robot_model/CMakeFiles/CMakeScratch/TryCompile-91IgX7”
+Makefile:127: recipe for target 'cmTC_64fef/fast' failed
+make: *** [cmTC_64fef/fast] Error 2
+
+
+

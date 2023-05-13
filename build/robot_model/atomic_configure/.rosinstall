@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lkw/catkin_ws/devel/.private/robot_model/setup.sh

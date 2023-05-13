@@ -1,0 +1,7 @@
+<launch>
+ <include file="$(find robot_gazebo)/launch/myrobot_world.launch"/>
+ <include file="$(find robot_gazebo)/launch/myrobot_gazebo_states.launch"/>
+ <include file="$(find robot_gazebo)/launch/robot_trajectory_controller.launch"/>
+ <include file="$(find robot_model_config)/launch/moveit_planning_execution.launch"/>
+
+</launch>

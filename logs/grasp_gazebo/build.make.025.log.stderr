@@ -1,0 +1,14 @@
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:[m[K In member function ‘[01m[Kvoid Gazebo_Process::create_scene()[m[K’:
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:82:9:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Ktable_surface_pose[m[K’
+         [01;31m[Ktable_surface_pose[m[K.position.z = 0.1;
+         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:98:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kprimitive[m[K’ was not declared in this scope
+         primitive2.type = [01;31m[Kprimitive[m[K.BOX;
+                           [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/lkw/catkin_ws/src/grasp_gazebo/src/grasp.cpp:98:27:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprimitive2[m[K’
+         primitive2.type = [01;36m[Kprimitive[m[K.BOX;
+                           [01;36m[K^~~~~~~~~[m[K
+                           [32m[Kprimitive2[m[K
+make[2]: *** [CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+make[1]: *** [CMakeFiles/grasp.dir/all] Error 2
+make: *** [all] Error 2

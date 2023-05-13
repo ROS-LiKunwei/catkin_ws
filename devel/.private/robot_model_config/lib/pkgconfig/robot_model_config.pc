@@ -1,0 +1,8 @@
+prefix=/home/lkw/catkin_ws/devel/.private/robot_model_config
+
+Name: robot_model_config
+Description: Description of robot_model_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

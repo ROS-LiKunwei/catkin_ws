@@ -1,0 +1,1 @@
+/home/lkw/catkin_ws/devel/.private/robot_model_config/lib/pkgconfig/robot_model_config.pc

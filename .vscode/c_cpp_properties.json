@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lkw/catkin_ws/devel/include/**",
+        "/home/lkw/catkin_ws/myrobot_tutorials_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_planners/chomp/chomp_motion_planner/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_planners/chomp/chomp_interface/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/benchmarks/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_plugins/moveit_ros_control_interface/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/move_group/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/planning_interface/move_group_interface/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/planning_interface/planning_scene_interface/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/occupancy_map_monitor/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/robot_interaction/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_ros/moveit_servo/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_setup_assistant/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_plugins/moveit_simple_controller_manager/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_planners/pilz_industrial_motion_planner/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_planners/pilz_industrial_motion_planner_testutils/include/**",
+        "/home/lkw/catkin_ws/src/moveit/moveit_planners/sbpl/core/sbpl_interface/include/**",
+        "/home/lkw/catkin_ws/src/myrobot_tutorials_ws/src/myrobot_tutorials/include/**",
+        "/home/lkw/catkin_ws/src/moveit_motion_planning_plugin/include/**", 
+        "/home/lkw/catkin_ws/src/grasp_gazebo/include/**", 
+        "/home/lkw/catkin_ws/src/robot_planning/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu17",
+      "cppStandard": "c++17"
+    }
+  ],
+  "version": 4
+}

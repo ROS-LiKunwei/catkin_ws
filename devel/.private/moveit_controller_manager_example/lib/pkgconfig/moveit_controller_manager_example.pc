@@ -1,0 +1,8 @@
+prefix=/home/lkw/catkin_ws/devel/.private/moveit_controller_manager_example
+
+Name: moveit_controller_manager_example
+Description: Description of moveit_controller_manager_example
+Version: 1.0.11
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_core roscpp

@@ -1,0 +1,7 @@
+Symlinking /home/lkw/catkin_ws/devel/share/moveit_motion_planning_plugin/cmake/moveit_motion_planning_pluginConfig.cmake
+Symlinking /home/lkw/catkin_ws/devel/share/moveit_motion_planning_plugin/cmake/moveit_motion_planning_pluginConfig-version.cmake
+Symlinking /home/lkw/catkin_ws/devel/lib/libmoveit_lerp_planner_plugin.so.0.0.0
+Symlinking /home/lkw/catkin_ws/devel/lib/libmoveit_lerp_planner_plugin.so
+Symlinking /home/lkw/catkin_ws/devel/lib/libmoveit_motion_planning_plugin.so.0.0.0
+Symlinking /home/lkw/catkin_ws/devel/lib/libmoveit_motion_planning_plugin.so
+Symlinking /home/lkw/catkin_ws/devel/lib/pkgconfig/moveit_motion_planning_plugin.pc

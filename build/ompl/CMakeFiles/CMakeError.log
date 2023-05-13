@@ -1,0 +1,66 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-cXaiFB
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_49998/fast && /usr/bin/make  -f CMakeFiles/cmTC_49998.dir/build.make CMakeFiles/cmTC_49998.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-cXaiFB”
+Building CXX object CMakeFiles/cmTC_49998.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_49998.dir/src.cxx.o -c /home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-cXaiFB/src.cxx
+Linking CXX executable cmTC_49998
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49998.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_49998.dir/src.cxx.o -o cmTC_49998 
+CMakeFiles/cmTC_49998.dir/src.cxx.o：在函数‘main’中：
+src.cxx:(.text+0x3e)：对‘pthread_create’未定义的引用
+src.cxx:(.text+0x4a)：对‘pthread_detach’未定义的引用
+src.cxx:(.text+0x56)：对‘pthread_cancel’未定义的引用
+src.cxx:(.text+0x67)：对‘pthread_join’未定义的引用
+src.cxx:(.text+0x7b)：对‘pthread_atfork’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_49998.dir/build.make:98: recipe for target 'cmTC_49998' failed
+make[1]: *** [cmTC_49998] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-cXaiFB”
+Makefile:127: recipe for target 'cmTC_49998/fast' failed
+make: *** [cmTC_49998/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-9GDvx3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_87bbc/fast && /usr/bin/make  -f CMakeFiles/cmTC_87bbc.dir/build.make CMakeFiles/cmTC_87bbc.dir/build
+make[1]: 进入目录“/home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-9GDvx3”
+Building CXX object CMakeFiles/cmTC_87bbc.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_87bbc.dir/CheckFunctionExists.cxx.o -c /home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-9GDvx3/CheckFunctionExists.cxx
+Linking CXX executable cmTC_87bbc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87bbc.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_87bbc.dir/CheckFunctionExists.cxx.o -o cmTC_87bbc  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_87bbc.dir/build.make:98: recipe for target 'cmTC_87bbc' failed
+make[1]: *** [cmTC_87bbc] Error 1
+make[1]: 离开目录“/home/lkw/catkin_ws/build/ompl/CMakeFiles/CMakeScratch/TryCompile-9GDvx3”
+Makefile:127: recipe for target 'cmTC_87bbc/fast' failed
+make: *** [cmTC_87bbc/fast] Error 2
+
+
+
